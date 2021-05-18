@@ -24,7 +24,7 @@ public class Heron {
         System.out.print("Auf wie viele Nachkommastellen soll der Wurzelwert gerundet werden? (10 = 1, 100 = 2, ...): ");
         int decimalPlaces = decimalPlaces_Input.nextInt();                            //  (Minimum: -2147483648)  -  Maximum: 2147483647
 
-        // Abfrage, ob vom Client (also man selbst) eingegebene Nachkommastellen Anzahl größer als 6 beträgt
+        // Vom Client (also man selbst) eingegebene Nachkommastellen Anzahl größer als 9?
         if (decimalPlaces > 1000000000) {                                             // Maximal 9 Nachkommastellen
             System.out.println("Value out of range!");
             TimeUnit.SECONDS.sleep(2);
@@ -44,7 +44,7 @@ public class Heron {
 
             double Ergebnis_Wurzelwert_Step1 = Math.round(Wandlung * decimalPlaces);
             double Ergebnis_Wurzelwert_Step2 = Ergebnis_Wurzelwert_Step1 / decimalPlaces;
-            System.out.println(Ergebnis_Wurzelwert_Step2);
+            System.out.println("Die Wurzel aus " + Radikand + " ist ungefähr " + Ergebnis_Wurzelwert_Step2 + ".");
         }
     }
 }
