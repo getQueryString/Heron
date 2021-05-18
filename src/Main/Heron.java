@@ -42,9 +42,9 @@ public class Heron {
                 neuerMittelwert = (neuerMittelwert + Wandlung) / 2;
             }
 
-            System.out.println(Wandlung);
-            double Ergebnis_Wurzelwert = Math.round(Wandlung * decimalPlaces) / decimalPlaces;
-            System.out.println(Ergebnis_Wurzelwert);
+            double Ergebnis_Wurzelwert_Step1 = Math.round(Wandlung * decimalPlaces);
+            double Ergebnis_Wurzelwert_Step2 = Ergebnis_Wurzelwert_Step1 / decimalPlaces;
+            System.out.println(Ergebnis_Wurzelwert_Step2);
         }
     }
 }
