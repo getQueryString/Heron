@@ -32,14 +32,14 @@ public class Heron {
         } else {
 
             double Wandlung = Radikand / Näherungszahl;
+            System.out.println("Wandlung " + Wandlung);
             double Mittelwert = (Näherungszahl + Wandlung) / 2;
-            Wandlung = Radikand / Mittelwert;
-            double neuerMittelwert = (Mittelwert + Wandlung) / 2;
+            System.out.println("Mittelwert " + Mittelwert);
 
             // Wiederhole 100x
             for (int i = 0; i < 100; i++) {
-                Wandlung = Radikand / neuerMittelwert;
-                neuerMittelwert = (neuerMittelwert + Wandlung) / 2;
+                Wandlung = Radikand / Mittelwert;
+                Mittelwert = (Mittelwert + Wandlung) / 2;
             }
 
             double Ergebnis_Wurzelwert_Step1 = Math.round(Wandlung * decimalPlaces);
