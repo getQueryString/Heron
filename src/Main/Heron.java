@@ -32,9 +32,7 @@ public class Heron {
         } else {
 
             double Wandlung = Radikand / Näherungszahl;
-            System.out.println("Wandlung " + Wandlung);
             double Mittelwert = (Näherungszahl + Wandlung) / 2;
-            System.out.println("Mittelwert " + Mittelwert);
 
             // Wiederhole 100x
             for (int i = 0; i < 100; i++) {
